@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input Form</title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+<body>
+    <form>
+        <header class="headerContainer"> <h1>HTML input form</h1></header>
+        <div> 
+            <label for="text">Name:</label>
+            <input type="text" id="text" name="text">
+            <error-output class="text-error" for="text"></error-output>
+        </div>
+        <div> 
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd">
+        </div>
+        <div> 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div> 
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url">
+        </div>
+        <div> 
+            <label for="serial">Serial:</label>
+            <input type="number" id="serial" name="serial">
+        </div>
+        <div> 
+            <label for="contact">The Type for Contact:</label>
+            <input type="tel" id="contact" name="contact">
+        </div>
+        <div> 
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search">
+        </div>
+        <div class="dateTime"> 
+            <label for="schedule">Schedule:</label>
+            <input type="datetime-local" id="schedule" name="schedule">
+        </div>
+        <div> 
+            <label for="salary">Salary:</label>
+            <input type="range" id="salary" name="salary" min="30000" max="50000" step="100" value="40000">
+            <output for="salary" class="salary-output">40000</output>
+        </div>
+        <div>
+            <button onclick="submitForm()">Submit</button>
+        </div>
+
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>
