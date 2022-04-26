@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input Element</title>
+    </head>
+    <body>
+        <h1>Input Element</h1>
+
+            <label for="FN">First Name:</label>
+            <input type="text " id="FN" name="FN"><br><br>
+
+            <label for="LN">Last Name:</label>
+            <input type="text" id="LN" name="LN"><br><br>
+           
+            <button onclick="submitForm()">Submit</button>
+        <br>
+        <p>Click the "Submit" button</p>
+    </body>
+    <script>
+        function submitForm(){
+            let firstName = document.getElementById("FN").value;
+            let lastName = document.getElementById("LN").value ;
+            const person = {
+                firstName: firstName,
+                lastName: lastName,
+            }
+            document.write(JSON.stringify(person));
+        }
+    </script>
+</html>

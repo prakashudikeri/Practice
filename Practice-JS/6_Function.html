@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function</title>
+    </head>    
+    <body>
+        <p id="string"></p>     <p id="num"></p>
+        
+        <p id="sum"></p> <button onclick="addNumb(2, 5)">Add</button><br>
+        
+        <br><button onclick="showDialogue()">Alert</button>
+        
+        <p id="return"></p>
+        
+        <p id="double call"></p> <button onclick="getAge(19)">Get Details</button>
+
+        <p id="fruit"></p> <button onclick="getFruit()">FavFruit</button>
+
+        <p id="convert"></p> 
+        <script>
+             writeText("Hello Everyone");
+                function writeText(str){ document.getElementById("string").innerHTML = str; }
+            
+                addNumbers(5,6);
+                function addNumbers(num1, num2){
+                    var sum = num1 + num2;
+                    document.getElementById("num").innerHTML = sum;   }
+            
+            function addNumb(n1, n2){
+                var sum = n1 + n2;
+                document.getElementById("sum").innerHTML = sum; }
+            
+            function showDialogue(){ alert("Hello World!"); }
+            
+            document.getElementById("return").innerHTML = sumNumb(5,5);
+            function sumNumb(x , y){ var sum = x + y; return "<br>"+sum;}
+            document.write(sumNumb(4,5));
+            
+            var fullName = getFullName('Prakash','Udikeri');
+            document.write(fullName);
+            function getFullName(fN, lN){ return "<br><br>" + fN + ' '+ lN; }
+            
+            function getAge(age){
+                var fullName = "ABC xyz";
+                document.getElementById("double call").innerHTML = 
+                "<br> Full Name: " + fullName + ", " + "Age is: " + age;    }
+
+            var fruit = "Orange";
+            function getFruit(){ document.getElementById("fruit").innerHTML = fruit; }
+
+            function toMiles(km) {
+                var miles = km * 0.621; return km + "Kms " + "Equals " + miles + " miles."
+            } alert(toMiles(4)); document.getElementById("convert").innerHTML = toMiles(10);
+        </script>
+    </body>
+</html>

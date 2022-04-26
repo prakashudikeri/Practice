@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p> 
+    
+    <p><br>In this the <b>person.showdetails()</b> is called when the button is clicked</p>
+    <button onclick="person1.showDetails()">Show Details</button>
+ 
+    <script>
+    var person = {
+        firstName: "Prakash", 
+        age: 32, 
+        hobbies: ["Coding","Foootball","Boxing"],
+        showName: function(){
+            alert(this.firstName);
+        },
+        showAge: function(){
+            alert(this.age);
+        }
+    }
+  document.getElementById("demo").innerHTML = person.firstName + "<br>" 
+  + person.age + "<br>" + person.showName(alert) +"<br>"+ person.hobbies[1] + 
+  "<br>" + person["age"]+"<br>"+ person["hobbies"][2]  ;
+
+  var person1 = { name: "John Doe", 
+                  age: 30, 
+                  showDetails:function(){
+                      alert(this.name+" is "+this.age+" years old")}
+                }
+
+    //object in an object
+    var fruits = {
+        mango:{ color: "Yellow", taste: "sweet" },
+        apple: { color: "Red", taste: "Bitter"}
+    }            
+    document.write("<br>"+ fruits.mango.color + "<br>");
+    document.write(fruits.apple.taste);
+    </script>
+</body>
+</html>

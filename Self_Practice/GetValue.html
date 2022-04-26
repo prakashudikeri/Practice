@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Type " id="inputId">
+    <button type="button" onclick="getInputValue();">Get Value</button><br>
+
+    <br><label for="FN">First Name:</label>
+    <input type="text " id="FN" name="FN"><br><br>
+    <label for="LN">Last Name:</label>
+    <input type="text" id="LN" name="LN"><br><br>   
+    <button onclick="submitForm()">Submit</button>
+   
+    <script>
+      function getInputValue() {
+        let inputVal = document.getElementById("inputId").value;
+        alert(inputVal);
+      }
+      function submitForm() {
+        let firstName = document.getElementById("FN").value; 
+        let lastName = document.getElementById("LN").value;
+        const person = {
+            firstName: firstName,
+            lastName: lastName,
+        }
+        document.write(JSON.stringify(person))
+      }
+    </script>
+  </body>
+</html>

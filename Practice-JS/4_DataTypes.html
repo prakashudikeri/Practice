@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Types</title>
+    </head>    
+    <body>
+        <p>String</p>
+        <p id="name"></p>
+        <p id="demo"></p>
+        <p id="equal"></p>
+        <p id="xyz"></p>
+        <p id="array"></p>
+        <p id="type"></p>
+        <script>
+                var name = 'Prakash'; var Name = "Udikeri";
+                document.write(name +"_"+Name);
+                document.getElementById("name").innerHTML = name + "<br>" + Name;
+
+                var funCode = true; var funMath = false;
+                document.getElementById("demo").innerHTML= "Coding fun?"+" "+funCode+", "+"Math Fun?"+" "+funMath;
+
+                /*var x = 3; var y = 4;
+                var areEqual = (x == y);
+                document.getElementsById("equal").innerHTML= areEqual;*/
+
+                var fruit = null;
+                document.write("<p>" + fruit);
+
+                //Object Data Type
+                var banana = {
+                    color: "Yellow", size: "Long", quantity: 3, isSweet: true,
+                };
+                document.getElementById("xyz").innerHTML = "Banana:  " +
+                    "Color: " + banana.color + ", " +
+                    "Size: " + banana.size + ", " +
+                    "Quantity: " + banana.quantity + ", " +
+                    "Is it Sweet?: " + banana.isSweet;
+ 
+            var fruit = ["Apple", "Orange", "Banana"];
+            document.getElementById("array").innerHTML = fruit[0]+" "+fruit[1]+" "+fruit[2];
+
+            document.getElementById("type").innerHTML = typeof "Prakash" + ", " + typeof 21 + ", " + typeof true + ", "+ typeof undefined ;
+
+        </script>
+    </body>
+    
+</html>
